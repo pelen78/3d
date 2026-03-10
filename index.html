@@ -291,6 +291,222 @@
     padding: 24px 32px; text-align: center;
     font-size: 14px; color: var(--muted);
   }
+
+  /* ─── ACTIVITIES SECTION ─── */
+  .activities-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 8px;
+  }
+
+  .activity-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+    transition: transform 0.18s, box-shadow 0.18s;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .activity-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+  }
+
+  .activity-badge {
+    min-width: 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 12px;
+    background: var(--tk-blue);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+  }
+
+  .activity-badge .act-label {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-bottom: 4px;
+  }
+
+  .activity-badge .act-num {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .activity-info {
+    flex: 1;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .activity-info h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .activity-info p {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .activity-action {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px;
+    gap: 8px;
+  }
+
+  .activity-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--tk-blue);
+    color: white;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  .activity-btn:hover { background: #005fa3; }
+
+  .activity-coming-soon {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #eef0f4;
+    color: var(--muted);
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    font-style: italic;
+    white-space: nowrap;
+  }
+
+
+  /* ─── EXPANDED ACTIVITY CARD ─── */
+  .activity-card-expanded {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+  }
+
+  .activity-card-expanded .act-header {
+    background: var(--tk-blue);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 24px;
+  }
+
+  .activity-card-expanded .act-header .act-badge {
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    padding: 8px 14px;
+    text-align: center;
+    min-width: 64px;
+  }
+  .activity-card-expanded .act-header .act-badge .act-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    font-family: 'Nunito', sans-serif;
+  }
+  .activity-card-expanded .act-header .act-badge .act-num {
+    display: block;
+    font-size: 28px;
+    font-weight: 900;
+    color: white;
+    line-height: 1.1;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .activity-card-expanded .act-header .act-title {
+    flex: 1;
+  }
+  .activity-card-expanded .act-header .act-title h3 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: white;
+    margin: 0 0 4px;
+  }
+  .activity-card-expanded .act-header .act-title p {
+    font-size: 14px;
+    color: rgba(255,255,255,0.72);
+    margin: 0;
+  }
+
+  .activity-card-expanded .act-body {
+    padding: 24px 28px;
+  }
+
+  .act-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 4px;
+  }
+
+  .act-step {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+
+  .act-step-num {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--tk-blue);
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .act-step-text {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+  }
+  .act-step-text strong { color: var(--tk-blue); }
+
 </style>
 </head>
 <body>
@@ -485,6 +701,103 @@
     </div>
 
   </div>
+
+
+  <!-- ══════════════════════════
+       SECTION 3 — CLASS ACTIVITIES
+  ═══════════════════════════ -->
+  <div class="section-header" style="margin-top: 40px;">
+    <div class="section-icon green">🛠️</div>
+    <div class="section-header-text">
+      <h2>Class Activities</h2>
+      <p>Projects and assignments — follow the instructions and submit to Google Classroom</p>
+    </div>
+  </div>
+
+  <div class="activities-list">
+
+    <!-- Activity 1 — Ruler -->
+    <div class="activity-card-expanded">
+      <div class="act-header">
+        <div class="act-badge">
+          <span class="act-label">Activity</span>
+          <span class="act-num">1</span>
+        </div>
+        <div class="act-title">
+          <h3>📏 Ruler</h3>
+          <p>Learn how to make a ruler in Tinkercad using basic shapes and measurements</p>
+        </div>
+      </div>
+      <div class="act-body">
+        <div class="act-steps">
+
+          <div class="act-step">
+            <div class="act-step-num">1</div>
+            <div class="act-step-text">
+              Go to <a href="https://www.tinkercad.com" target="_blank" style="color:var(--tk-blue);font-weight:700;">Tinkercad.com</a> and log in with your school Google account.
+            </div>
+          </div>
+
+          <div class="act-step">
+            <div class="act-step-num">2</div>
+            <div class="act-step-text">
+              Join your <strong>class group</strong> using the link for your block, then open the <strong>Ruler</strong> tutorial and follow the steps inside Tinkercad to complete it.
+              <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;">
+                <a href="https://www.tinkercad.com/joinclass/CYZU7GQFB" target="_blank" style="display:inline-flex;align-items:center;gap:7px;background:#0078D7;color:white;border-radius:8px;padding:9px 18px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;text-decoration:none;">🔗 Join Block B</a>
+                <a href="https://www.tinkercad.com/joinclass/T6CAAKDET" target="_blank" style="display:inline-flex;align-items:center;gap:7px;background:#0078D7;color:white;border-radius:8px;padding:9px 18px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;text-decoration:none;">🔗 Join Block C</a>
+                <a href="https://www.tinkercad.com/joinclass/BAVXK8HYE" target="_blank" style="display:inline-flex;align-items:center;gap:7px;background:#0078D7;color:white;border-radius:8px;padding:9px 18px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:800;text-decoration:none;">🔗 Join Block G</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="act-step">
+            <div class="act-step-num">3</div>
+            <div class="act-step-text">
+              When you are done, take a <strong>screenshot</strong> of your finished ruler in Tinkercad.
+            </div>
+          </div>
+
+          <div class="act-step">
+            <div class="act-step-num">4</div>
+            <div class="act-step-text">
+              Copy the <strong>link to your Tinkercad design</strong> — click <em>Share</em> inside Tinkercad to get the link.
+            </div>
+          </div>
+
+          <div class="act-step">
+            <div class="act-step-num">5</div>
+            <div class="act-step-text">
+              Submit to <strong>Google Classroom</strong> — paste your design link <em>and</em> attach your screenshot.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="note-box" style="margin-top: 20px;">
+          <span class="note-icon">✅</span>
+          <span><strong>Submission checklist:</strong> Make sure you include both your <strong>Tinkercad link</strong> and a <strong>screenshot</strong> before turning it in.</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Activity 2 — placeholder -->
+    <div class="activity-card" style="opacity:0.6; cursor:default;">
+      <div class="activity-badge" style="background:#a0aab8;">
+        <span class="act-label">Activity</span>
+        <span class="act-num">2</span>
+      </div>
+      <div class="activity-info">
+        <h3 style="color:var(--muted);">Coming Soon</h3>
+        <p>The next activity will be posted here when it's ready.</p>
+      </div>
+      <div class="activity-action">
+        <span class="activity-coming-soon">🔒 Not yet available</span>
+      </div>
+    </div>
+
+  </div>
+
 
 </div>
 
